@@ -1,0 +1,58 @@
+---
+import { Icon } from "astro-icon/components";
+const { text1 = "DasBoard" } = Astro.props;
+const { text2 = "Applications" } = Astro.props;
+const { text3 = "WordPress Sites" } = Astro.props;
+const { text4 = "DNS" } = Astro.props;
+---
+
+<div class="w-[300px] h-[400px] bg-white flex items-center justify-center">
+    <nav class="w-[80%] h-[80%] flex items-center justify-center">
+        <ul class="flex flex-col gap-4 w-full text-2xl font-medium">
+            <li>
+                <a class="rounded-md h-[40px] w-[100%] flex items-center hover:bg-gray-300 cursor-pointer gap-2" href="/">
+                    <slot name="Icon">
+                        <Icon name="mdi:office-building"
+                        class="size-7"
+                        />
+                    </slot>
+                    <p>
+                        {text1}
+                    </p></a>
+            </li>
+            <li>
+                <a
+                    href="/applications"
+                    class="rounded-md h-[40px] w-[100%] flex items-center hover:bg-gray-300 cursor-pointer gap-2"
+                >
+                    <Icon name="mdi:cube-outline" class="size-7" />
+                    <p>
+                        {text2}
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="/wordPress"
+                    class="rounded-md h-[40px] w-[100%] flex items-center hover:bg-gray-300 cursor-pointer gap-2"
+                >
+                    <Icon name="mdi:world-wide-web" class="size-7" />
+                    <p>
+                        {text3}
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a
+                    href="/dns"
+                    class="rounded-md h-[40px] w-[100%] flex items-center hover:bg-gray-300 cursor-pointer gap-2"
+                >
+                    <Icon name="mdi:dns-outline" class="size-7" />
+                    <p>
+                        {text4}
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

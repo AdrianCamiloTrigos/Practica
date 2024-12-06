@@ -1,0 +1,70 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<header>
+			<div class="bg-black h-[120px] w-full flex items-center px-[150px]">
+				<p class="text-6xl text-white font-semibold w-[400px] flex items-center mr-[150px]">
+					KINSTA
+				</p>
+				<nav class="w-full h-[60px] flex items-center gap-7">
+					<ul class="bg-gray-800 w-[160px] h-[40px] rounded-md gap-2 flex items-center justify-between text-white mr-[600px] cursor-pointer">
+						<li>
+							<Icon 
+							name="mdi:office-building"
+							class="size-8"
+							/>
+						</li>
+						<li class="font-bold">BUILDINGS</li>
+						<li>
+							<Icon 
+							name="mdi:keyboard-arrow-down"
+							class="size-6"
+							/>
+						</li>
+					</ul>
+					<div>
+						<Icon name="mdi:bell-badge-outline"
+						class="size-10 cursor-pointer text-gray-600"
+						/>
+					</div>
+					<div class=" w-[100px] h-[50px] flex items-center justify-around text-white cursor-pointer">
+						<div>
+							<Icon name="mdi:file-document"
+						     class="size-10"
+						/>
+						</div>
+						<p class="text-white font-normal">Docs</p>
+					</div>
+					<ul class=" w-[170px] h-[40px] rounded-md flex items-center gap-2 text-white cursor-pointer">
+						<li>
+							<div class="bg-blue-700 w-10 h-10 rounded-md flex items-center justify-center">
+								<p>K</p>
+							</div>
+						</li>
+						<li class="font-bold">Kinsta User</li>
+						<li>
+							<Icon 
+							name="mdi:keyboard-arrow-down"
+							class="size-6"
+							/>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<slot />
+		
+	</body>
+</html>
+
+

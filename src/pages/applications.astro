@@ -1,0 +1,27 @@
+---
+import SeccionBotones from "../components/SeccionBotones.astro";
+import Layout from "../layouts/Layout.astro";
+import Tarjeta from "../components/Tarjeta.astro";
+---
+<Layout>
+    <body>
+		<div class="h-screen bg-slate-200 py-12 px-[150px] flex gap-[150px]">
+			<SeccionBotones />
+			<Tarjeta>
+				<span slot="title">Aplicaciones</span>
+				<span slot="section1">Lorem ipsum dolor</span>
+				<span slot="section2Title">Lorem, ipsum dolor.</span>
+				<span slot="section2Text"
+					>Loremm ipsum dolor sit amet consectetur adipisicing elit.
+					Doloribus, facere.</span
+				>
+				<span slot="textoBoton"> Add Service </span>
+				<span slot="option1">Aplication</span>
+				<span slot="option2">Database</span>
+				<span slot="img">
+					<img class="size-80" src="public/img/purple-flower-thin-petals-flat-615439.webp" alt="">
+				</span>
+			</Tarjeta>
+		</div>
+	</body>
+</Layout>

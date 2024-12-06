@@ -1,0 +1,45 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<div class="bg-white h-[500px] w-[1200px] rounded-2xl flex">
+    <div class=" h-[100%] w-[60%] p-[50px]">
+        <p class="mb-8 text-3xl font-semibold">
+            <slot name="title" />
+        </p>
+        <div class="w-fit h-[40px] mb-6">
+            <div class="bg-purple-900 w-[150px] h-[4px]"></div>
+            <div class="text-gray-400">
+                <slot name="section1" />
+            </div>
+        </div>
+        <div class="flex flex-col gap-2 w-[450px] mb-10">
+            <h1 class="font-semibold text-2xl">
+                <slot name="section2Title" />
+            </h1>
+            <p class="text-gray-500">
+                <slot name="section2Text" />
+            </p>
+        </div>
+        <div class="w-fit grid gap-2">
+            <a class="p-3 w-fit bg-blue-500 rounded-lg text-white flex items-center" href="#">
+                <slot name="textoBoton" />
+                <Icon
+                 name="mdi:keyboard-arrow-down" 
+                 class="size-8"
+                />
+            </a>
+            <div class="bg-white h-[80px] grid gap-2 p-2">
+                <div class="bg-white h-7 w-[100%] flex items-center pl-3 hover:bg-gray-300 cursor-pointer" >
+                    <slot name="option1"></slot>
+                </div>
+                <div class="bg-white h-7 w-[100%] flex items-center pl-3 hover:bg-gray-300 cursor-pointer" >
+                    <slot name="option2"></slot>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=" h-[100%] w-[40%] pt-[100px] flex items-center justify-center">
+        <slot name="img"></slot>
+    </div>
+</div>
